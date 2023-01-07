@@ -2,8 +2,11 @@ version: '3'
 
 services:
   broker-service:
-    build:
+  # sets the parameters required for building the image
+  build:
+      # sets the directory for the microservice
       context: broker
+      # sets the image name for the microservice
       dockerfile: broker-service.dockerfile
     restart: always
     ports:
